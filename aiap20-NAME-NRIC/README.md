@@ -23,7 +23,7 @@ yaml
 Project Folder Structure:
 - .gitHub/                   # GitHub-related configurations (optional)
 - src/                        # Folder containing Python scripts/modules for the ML pipeline
-  - pipeline.py               # Main Python script with the pipeline implementation
+  - eda.py               # Main Python script with the pipeline implementation
 - run.sh                      # Bash script to execute the pipeline
 - requirements.txt            # List of dependencies required to run the pipeline
 - README.md                   # This file
@@ -55,9 +55,9 @@ bash
 This will execute the entire machine learning pipeline, including data loading, preprocessing, model training, and evaluation.
 
 Modifying Parameters
-The main hyperparameters for the models (like max_depth, n_estimators, etc.) are defined within the pipeline.py script. You can modify these parameters to experiment with different configurations.
+The main hyperparameters for the models (like max_depth, n_estimators, etc.) are defined within the eda.py script. You can modify these parameters to experiment with different configurations.
 
-If you wish to adjust the feature engineering or preprocessing steps, you can modify the code within pipeline.py where the data is processed.
+If you wish to adjust the feature engineering or preprocessing steps, you can modify the code within eda.py where the data is processed.
 
 Logical Flow of the Pipeline
 Data Loading and Preprocessing:
