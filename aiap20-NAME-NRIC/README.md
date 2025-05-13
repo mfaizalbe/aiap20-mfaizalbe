@@ -1,3 +1,4 @@
+
 # 💡 Machine Learning Pipeline for Predicting Subscription Status
 
 **Author:** Muhammad Faizal Bin Ehsan
@@ -22,14 +23,14 @@ This project aims to predict whether a customer will subscribe to a service (bin
 
 ```
 aiap20-muhammad-faizal-bin-ehsan-528Z/
-│
-├── .github/                # GitHub-specific configurations (optional)
-├── src/                    # Python scripts/modules for the ML pipeline
-│   └── eda.py              # Core implementation of the pipeline
-├── eda.ipynb               # Jupyter notebook with EDA visuals and insights
-├── run.sh                  # Bash script to execute the pipeline
-├── requirements.txt        # List of Python dependencies
-└── README.md               # Project documentation (this file)
+└── aiap20-NAME-NRIC/
+    ├── .github/             # GitHub-specific configurations (optional)
+    ├── src/                 # Python scripts/modules for the ML pipeline
+    │   └── eda.py           # Core implementation of the pipeline
+    ├── eda.ipynb            # Jupyter notebook with EDA visuals and insights
+    ├── run.sh               # Bash script to execute the pipeline
+    ├── requirements.txt     # List of Python dependencies
+    └── README.md            # Project documentation (this file)
 ```
 
 ---
@@ -44,7 +45,7 @@ aiap20-muhammad-faizal-bin-ehsan-528Z/
 
 ```bash
 git clone https://github.com/mfaizalbe/aiap20-muhammad-faizal-bin-ehsan-528Z.git
-cd aiap20-muhammad-faizal-bin-ehsan-528Z
+cd aiap20-muhammad-faizal-bin-ehsan-528Z/aiap20-NAME-NRIC
 ```
 
 ### 📦 Install dependencies
@@ -162,4 +163,3 @@ This script runs the entire process including:
 * **Dataset:** [Bank Marketing Dataset](https://techassessment.blob.core.windows.net/aiap20-assessment-data/bmarket.db)
 * **Libraries Used:** `Pandas`, `Scikit-learn`, `XGBoost`, `Matplotlib`, `Seaborn`, `NumPy`
 
----
