@@ -1,188 +1,165 @@
-Machine Learning Pipeline for Predicting Subscription Status
-Full Name and Contact Info
-Full Name: Muhammad Faizal Bin Ehsan
+# 💡 Machine Learning Pipeline for Predicting Subscription Status
 
-Email: mdfaizalehsan@gmail.com
+**Author:** Muhammad Faizal Bin Ehsan
+📧 **Email:** [mdfaizalehsan@gmail.com](mailto:mdfaizalehsan@gmail.com)
 
-Project Overview
-This project focuses on predicting whether a customer will subscribe to a service (binary classification). The dataset contains various features about customer behavior, and the goal is to classify whether a customer will subscribe (Yes) or not (No).
+---
 
-The pipeline performs:
+## 📌 Project Overview
 
-Exploratory Data Analysis (EDA) for understanding the data and identifying patterns.
+This project aims to predict whether a customer will subscribe to a service (binary classification). The dataset includes various features related to customer behavior. The goal is to classify customers as either **subscribed ("Yes")** or **not subscribed ("No")**.
 
-Preprocessing of features, including handling missing data and scaling.
+### The pipeline covers:
 
-Model Training using multiple classifiers such as Logistic Regression, Decision Tree, Random Forest, XGBoost, and Naive Bayes.
+* **Exploratory Data Analysis (EDA):** Understanding patterns and insights.
+* **Data Preprocessing:** Handling missing values, encoding, and scaling.
+* **Model Training:** Logistic Regression, Decision Tree, Random Forest, XGBoost, Naive Bayes.
+* **Model Evaluation:** Accuracy, Precision, Recall, F1-Score, ROC AUC.
 
-Model Evaluation using various metrics, including Accuracy, Precision, Recall, F1-Score, and ROC AUC.
+---
 
-Folder Structure
-yaml
+## 📁 Project Structure
 
-Project Folder Structure:
-- .gitHub/                   # GitHub-related configurations (optional)
-- src/                        # Folder containing Python scripts/modules for the ML pipeline
-  - eda.py               # Main Python script with the pipeline implementation
-- run.sh                      # Bash script to execute the pipeline
-- requirements.txt            # List of dependencies required to run the pipeline
-- README.md                   # This file
-- eda.ipynb                   # Jupyter notebook containing exploratory data analysis
-Installation and Setup
-Prerequisites
-Ensure you have Python 3.6+ installed on your system.
+```
+aiap20-muhammad-faizal-bin-ehsan-528Z/
+│
+├── .github/                # GitHub-specific configurations (optional)
+├── src/                    # Python scripts/modules for the ML pipeline
+│   └── eda.py              # Core implementation of the pipeline
+├── eda.ipynb               # Jupyter notebook with EDA visuals and insights
+├── run.sh                  # Bash script to execute the pipeline
+├── requirements.txt        # List of Python dependencies
+└── README.md               # Project documentation (this file)
+```
 
-Setting up the environment
-Clone this repository to your local machine:
+---
 
-bash
+## ⚙️ Installation and Setup
 
-git clone https://github.com/your_username/your_repository.git
-cd your_repository
+### ✅ Prerequisites
 
-Install the required dependencies:
+* Python 3.6 or higher
 
-bash
+### 📥 Clone the repository
 
+```bash
+git clone https://github.com/mfaizalbe/aiap20-muhammad-faizal-bin-ehsan-528Z.git
+cd aiap20-muhammad-faizal-bin-ehsan-528Z
+```
+
+### 📦 Install dependencies
+
+```bash
 pip install -r requirements.txt
-Running the Pipeline
-To execute the full pipeline, simply run the following command in your terminal:
+```
 
-bash
+---
 
+## 🚀 Running the Pipeline
+
+To run the complete pipeline:
+
+```bash
 ./run.sh
+```
 
-This will execute the entire machine learning pipeline, including data loading, preprocessing, model training, and evaluation.
+This script runs the entire process including:
 
-Modifying Parameters
-The main hyperparameters for the models (like max_depth, n_estimators, etc.) are defined within the eda.py script. You can modify these parameters to experiment with different configurations.
+* Data loading
+* Preprocessing
+* Model training
+* Evaluation
 
-If you wish to adjust the feature engineering or preprocessing steps, you can modify the code within eda.py where the data is processed.
+---
 
-Logical Flow of the Pipeline
-Data Loading and Preprocessing:
+## 🛠 Modifying Parameters
 
-The dataset is loaded from a CSV file, missing values are handled, and features are scaled or encoded as needed.
+* Modify hyperparameters (e.g., `max_depth`, `n_estimators`) inside `src/eda.py`.
+* Adjust feature engineering or preprocessing directly in `eda.py`.
 
-Exploratory Data Analysis (EDA):
+---
 
-Descriptive statistics, correlation analysis, and visualizations are generated in the eda.ipynb notebook to understand the data better.
+## 🔄 Pipeline Workflow
 
-Model Training and Evaluation:
+### 📂 Data Loading & Preprocessing
 
-Multiple models (Logistic Regression, Decision Tree, Random Forest, XGBoost, Naive Bayes) are trained and evaluated using cross-validation.
+* Load dataset from CSV
+* Handle missing values
+* Encode categorical features and scale numerical ones
 
-The evaluation metrics include accuracy, precision, recall, F1-score, and ROC AUC.
+### 📊 Exploratory Data Analysis (EDA)
 
-Model Tuning:
+* Descriptive statistics
+* Correlation matrix
+* Visualizations (in `eda.ipynb`)
 
-Hyperparameter tuning and feature engineering are applied to optimize model performance.
+### 🤖 Model Training & Evaluation
 
-Key Findings from EDA
-Imbalanced Dataset
-The dataset contains imbalanced classes, with more No (non-subscribers) than Yes (subscribers). This created challenges for model performance, especially in correctly predicting the minority class (Yes).
+* Train: Logistic Regression, Decision Tree, Random Forest, XGBoost, Naive Bayes
+* Evaluate using:
 
-Feature Correlation
-Key features such as Age, Campaign Calls, and Previous Contact Days showed strong correlations with the target variable (Subscription Status), and were thus selected as important features in the models.
+  * **Accuracy**
+  * **Precision**
+  * **Recall**
+  * **F1-Score**
+  * **ROC AUC**
 
-Class Imbalance Handling
-SMOTE (Synthetic Minority Over-sampling Technique) was used to balance the dataset and improve the recall for the minority class (Yes).
+### 🔧 Model Tuning
 
-Feature Engineering and Processing
-Data Preprocessing Steps:
-Categorical Features: Categorical features like Occupation, Marital Status, and Education Level were encoded using one-hot encoding.
+* Basic hyperparameter tuning performed
+* SMOTE was tested for class balancing but not used in the final pipeline due to poorer performance
 
-Continuous Features: Features like Campaign Calls were binned into discrete categories for better interpretability.
+---
 
-Class Balancing: SMOTE was applied to generate synthetic samples for the minority class (Yes).
+## 📈 Key EDA Findings
 
-Model Selection and Evaluation
-Model Selection
-We trained and evaluated the following models:
+* **Imbalanced Dataset:** The dataset has more "No" (non-subscribers) than "Yes" (subscribers), which challenges recall for the minority class.
+* **Important Features:** Age, number of campaign calls, and previous contact duration were significantly correlated with subscription outcomes.
+* **Class Imbalance Note:** SMOTE was explored but discarded, as it negatively affected model performance.
 
-Logistic Regression: Chosen for its simplicity and interpretability.
+---
 
-Decision Tree: A non-linear model that can handle complex relationships between features.
+## 🔍 Feature Engineering Summary
 
-Random Forest: An ensemble model that mitigates overfitting and improves robustness.
+* **Categorical Encoding:** One-hot encoding was applied to features such as Occupation, Marital Status, and Education.
+* **Discretization:** Continuous features (e.g., campaign calls) were binned into categories to enhance interpretability.
+* **Imbalance Handling:** The final pipeline did not use oversampling techniques due to performance degradation.
 
-XGBoost: An advanced gradient boosting model known for its high performance and ability to handle imbalanced datasets.
+---
 
-Naive Bayes: A baseline model to compare against other more complex models.
+## 🧪 Model Summary
 
-Evaluation Metrics
-The models were evaluated using the following metrics:
+| Model               | Accuracy | ROC AUC | Notes                                                        |
+| ------------------- | -------- | ------- | ------------------------------------------------------------ |
+| Logistic Regression | 89.55%   | 0.72    | High accuracy, but limited recall for minority class         |
+| XGBoost             | 89.31%   | 0.73    | Strong AUC, best overall trade-off                           |
+| Random Forest       | 87.39%   | 0.67    | Robust, but biased toward majority class                     |
+| Decision Tree       | 84.46%   | 0.60    | Most affected by imbalance                                   |
+| Naive Bayes         | 89.43%   | —       | Competitive accuracy, slightly better recall for "Yes" class |
 
-Accuracy: The proportion of correct predictions.
+---
 
-Precision: The proportion of true positive predictions out of all positive predictions.
+## ✅ Conclusion and Next Steps
 
-Recall: The proportion of true positives out of all actual positives.
+* **Best Models:** XGBoost and Naive Bayes showed the strongest ROC AUC performance.
+* **Areas for Improvement:**
 
-F1-Score: The harmonic mean of precision and recall.
+  * Tune hyperparameters further (especially for XGBoost)
+  * Collect additional data for minority class ("Yes")
+  * Consider alternative balancing strategies (e.g., class weights)
 
-ROC AUC: Area under the Receiver Operating Characteristic curve, a metric that captures the model's ability to distinguish between the classes.
+---
 
-Model Evaluation Summary
-Logistic Regression:
+## 🚀 Future Deployment
 
-Accuracy: 89.55%
+* **Model Deployment:** Models can be deployed using Flask or FastAPI as REST APIs.
+* **Continuous Learning:** Future data can be integrated to retrain and improve performance over time.
 
-ROC AUC: 0.72
+---
 
-Strong accuracy but struggles with recall for the minority class (Yes).
+## 🙏 Acknowledgements
 
-XGBoost:
+* **Dataset:** [Bank Marketing Dataset](https://techassessment.blob.core.windows.net/aiap20-assessment-data/bmarket.db)
+* **Libraries Used:** `Pandas`, `Scikit-learn`, `XGBoost`, `Matplotlib`, `Seaborn`, `NumPy`
 
-Accuracy: 89.31%
-
-ROC AUC: 0.73
-
-Slight improvement in AUC over Logistic Regression but still struggles with recall for Yes class.
-
-Random Forest:
-
-Accuracy: 87.39%
-
-ROC AUC: 0.67
-
-Performs slightly better than Decision Tree but still biased towards the majority class.
-
-Decision Tree:
-
-Accuracy: 84.46%
-
-ROC AUC: 0.60
-
-Struggles the most with the imbalanced dataset and has low recall for the minority class.
-
-Naive Bayes:
-
-Accuracy: 89.43%
-
-Owner avatar
-
-
-
-Offers good performance, with slightly better recall for Yes compared to Logistic Regression.
-
-Conclusion and Future Work
-Best Performing Model: XGBoost and Naive Bayes showed strong performance with ROC AUCs of 0.73, though there is still room for improvement in recall for the minority class (Yes).
-
-Next Steps:
-
-Hyperparameter tuning: Further tuning of the models, especially XGBoost, could improve recall for the minority class.
-
-Additional Data: More data, especially for the minority class (Yes), would help improve model performance.
-
-Model Deployment: The models can be deployed as REST APIs for real-time predictions.
-
-Deployment Considerations
-Model Deployment: The trained models can be deployed as REST APIs using frameworks like Flask or FastAPI.
-
-Continuous Learning: As new data becomes available, models can be retrained to adapt to changing customer behaviors.
-
-Acknowledgements
-Dataset: https://techassessment.blob.core.windows.net/aiap20-assessment-data/bmarket.db
-
-Libraries: Pandas, Scikit-learn, XGBoost, etc.
+---
