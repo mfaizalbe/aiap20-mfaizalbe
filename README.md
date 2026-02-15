@@ -23,14 +23,13 @@ This project aims to predict whether a customer will subscribe to a service (bin
 
 ```
 aiap20-muhammad-faizal-bin-ehsan-528Z/
-└── aiap20-NAME-NRIC/
-    ├── .github/             # GitHub-specific configurations (optional)
-    ├── src/                 # Python scripts/modules for the ML pipeline
-    │   └── eda.py           # Core implementation of the pipeline
-    ├── eda.ipynb            # Jupyter notebook with EDA visuals and insights
-    ├── run.sh               # Bash script to execute the pipeline
-    ├── requirements.txt     # List of Python dependencies
-    └── README.md            # Project documentation (this file)
+├── .github/             # GitHub-specific configurations (optional)
+├── src/                 # Python scripts/modules for the ML pipeline
+│   └── eda.py           # Core implementation of the pipeline
+├── eda.ipynb            # Jupyter notebook with EDA visuals and insights
+├── run.sh               # Bash script to execute the pipeline
+├── requirements.txt     # List of Python dependencies
+└── README.md            # Project documentation (this file)
 ```
 
 ---
