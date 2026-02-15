@@ -8,7 +8,7 @@
 
 ## 📌 Project Overview
 
-This project aims to predict whether a customer will subscribe to a service (binary classification). The dataset includes various features related to customer behavior. The goal is to classify customers as either **subscribed ("Yes")** or **not subscribed ("No")**.
+This project aims to predict whether a customer will subscribe to a service (binary classification). The dataset includes various features related to customer behaviour. The goal is to classify customers as either **subscribed ("Yes")** or **not subscribed ("No")**.
 
 ### The pipeline covers:
 
