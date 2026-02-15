@@ -45,7 +45,7 @@ aiap20-muhammad-faizal-bin-ehsan-528Z/
 
 ```bash
 git clone https://github.com/mfaizalbe/aiap20-muhammad-faizal-bin-ehsan-528Z.git
-cd aiap20-muhammad-faizal-bin-ehsan-528Z/aiap20-NAME-NRIC
+cd aiap20-muhammad-faizal-bin-ehsan-528Z
 ```
 
 ### 📦 Install dependencies
