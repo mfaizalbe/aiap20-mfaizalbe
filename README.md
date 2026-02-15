@@ -22,7 +22,7 @@ This project aims to predict whether a customer will subscribe to a service (bin
 ## 📁 Project Structure
 
 ```
-aiap20-muhammad-faizal-bin-ehsan-528Z/
+aiap20-mfaizalbe/
 ├── .github/             # GitHub-specific configurations (optional)
 ├── src/                 # Python scripts/modules for the ML pipeline
 │   └── eda.py           # Core implementation of the pipeline
@@ -43,8 +43,8 @@ aiap20-muhammad-faizal-bin-ehsan-528Z/
 ### 📥 Clone the repository
 
 ```bash
-git clone https://github.com/mfaizalbe/aiap20-muhammad-faizal-bin-ehsan-528Z.git
-cd aiap20-muhammad-faizal-bin-ehsan-528Z
+git clone https://github.com/mfaizalbe/aiap20-mfaizalbe.git
+cd aiap20-mfaizalbe
 ```
 
 ### 📦 Install dependencies
