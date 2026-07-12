@@ -26,8 +26,10 @@ aiap20-mfaizalbe/
 ├── data/                          # Local-only: place bmarket.db here (see Data Setup below)
 ├── src/                           # Python scripts/modules for the ML pipeline
 │   └── eda.py                     # Core implementation of the pipeline
-├── eda.ipynb                      # Jupyter notebook with EDA visuals and insights
-├── AIAP20 - Muhammad Faizal Bin Ehsan.pptx  # Project presentation slides
+├── notebooks/
+│   └── eda.ipynb                  # Jupyter notebook with EDA visuals and insights
+├── docs/
+│   └── AIAP20 - Muhammad Faizal Bin Ehsan.pptx  # Project presentation slides
 ├── run.sh                         # Bash script to execute the pipeline
 ├── requirements.txt               # List of Python dependencies
 └── README.md                      # Project documentation (this file)
@@ -103,7 +105,7 @@ This script runs the entire process including:
 
 * Descriptive statistics
 * Correlation matrix
-* Visualizations (in `eda.ipynb`)
+* Visualizations (in `notebooks/eda.ipynb`)
 
 ### 🤖 Model Training & Evaluation
 
