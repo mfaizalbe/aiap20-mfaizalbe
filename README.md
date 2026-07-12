@@ -23,13 +23,14 @@ This project aims to predict whether a customer will subscribe to a service (bin
 
 ```
 aiap20-mfaizalbe/
-├── .github/             # GitHub-specific configurations (optional)
-├── src/                 # Python scripts/modules for the ML pipeline
-│   └── eda.py           # Core implementation of the pipeline
-├── eda.ipynb            # Jupyter notebook with EDA visuals and insights
-├── run.sh               # Bash script to execute the pipeline
-├── requirements.txt     # List of Python dependencies
-└── README.md            # Project documentation (this file)
+├── data/                          # Local-only: place bmarket.db here (see Data Setup below)
+├── src/                           # Python scripts/modules for the ML pipeline
+│   └── eda.py                     # Core implementation of the pipeline
+├── eda.ipynb                      # Jupyter notebook with EDA visuals and insights
+├── AIAP20 - Muhammad Faizal Bin Ehsan.pptx  # Project presentation slides
+├── run.sh                         # Bash script to execute the pipeline
+├── requirements.txt               # List of Python dependencies
+└── README.md                      # Project documentation (this file)
 ```
 
 ---
@@ -52,6 +53,17 @@ cd aiap20-mfaizalbe
 ```bash
 pip install -r requirements.txt
 ```
+
+### 🗄️ Data Setup
+
+The pipeline reads from a local SQLite database that is **not** included in this repository.
+
+```bash
+mkdir -p data
+curl -o data/bmarket.db https://techassessment.blob.core.windows.net/aiap20-assessment-data/bmarket.db
+```
+
+Make sure the file ends up at `data/bmarket.db` — this is the path `src/eda.py` expects.
 
 ---
 
